@@ -4,17 +4,17 @@ public class Produto {
 	private int id;
 	private String nome;
 	private double preco;
-	private int qtdEstoque;	
+	private int quantidadeEstoque;	
 	
 	public Produto() {
 		super();
 	}	
-	public Produto(int id, String nome, double preco, int qtdEstoque) {
+	public Produto(int id, String nome, double preco, int quantidadeEstoque) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.preco = preco;
-		this.qtdEstoque = qtdEstoque;
+		this.quantidadeEstoque = quantidadeEstoque;
 	}	
 	public int getId() {
 		return id;
@@ -34,11 +34,11 @@ public class Produto {
 	public void setPreco(double preco) {
 		this.preco = preco;
 	}
-	public int getQtdEstoque() {
-		return qtdEstoque;
+	public int getQuantidadeEstoque() {
+		return quantidadeEstoque;
 	}
-	public void setQtdEstoque(int qtdEstoque) {
-		this.qtdEstoque = qtdEstoque;
+	public void setQuantidadeEstoque(int quantidadeEstoque) {
+		this.quantidadeEstoque = quantidadeEstoque;
 	}
 	
 	
