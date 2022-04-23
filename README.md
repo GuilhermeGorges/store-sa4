@@ -1,13 +1,13 @@
 <h1>Store</h1>
 
-#Explorando a conexao entre backend e banco de dados. 
+<strong>Explorando a conexao entre backend e banco de dados. </strong>
 
 <h2>Objetivo</h2>
 
-#Atividade realizada com a finalidade de cumprir requisitos na disciplina de desenvolvimento de sistemas do SENAI.
+<strong>Atividade realizada com a finalidade de cumprir requisitos na disciplina de desenvolvimento de sistemas do SENAI.</strong>
 
 <h2>Tecnologias</h2>
 
-#- Java 
-#- WildFly
-#- MySQL
+<strong>  - Java </strong><br>
+<strong>  - WildFly</strong><br>
+<strong>  - MySQL</strong><br>
