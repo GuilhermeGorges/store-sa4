@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Excluir Cliente</title>
 </head>
 <body>
+	<a href="consultar.jsp">Consultar</a><br>
 	<a href="index.html">Voltar</a>
 
 </body>

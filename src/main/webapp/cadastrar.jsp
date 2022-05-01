@@ -4,22 +4,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Cadastro de Produto</title>
+<title>Cadastro de Cliente</title>
 </head>
 <body>
-	<form action="ProdutoServlet" method="post">
+	<form action="ClientServlet" method="post">
 		<table>
 				<tr>
 					<td>Nome:</td>
 					<td><input type="text" name="nome"></td>
 				</tr>
 				<tr>
-					<td>Preço:</td>
-					<td><input type="text" name="preco"></td>
+					<td>Endereco:</td>
+					<td><input type="text" name="endereco"></td>
 				</tr>
 				<tr>
-					<td>Quantidade Estoque:</td>
-					<td><input type="text" name="quantidadeEstoque"></td>
+					<td>Modalidade:</td>
+					<td><input type="text" name="modalidade"></td>
 				</tr>
 				<tr>
 					<td colspan="2">

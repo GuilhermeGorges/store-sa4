@@ -1,10 +1,14 @@
 package connection;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class ConexaoMySQL {
 	private static String DRIVER = "com.mysql.cj.jdbc.Driver"; //indica o nome da classe dentro do JDBC
-    private static String URL = "jdbc:mysql://localhost:3306/sa4_store"; //endereço de acesso
+    private static String URL = "jdbc:mysql://localhost:3306/shoes-happy"; //endereço de acesso
     private static String USER = "root"; //usuário do bd
     private static String PASS = "Java!!123"; //senha do bd
 

@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<a href="consultar.jsp">Consultar</a><br>
 	<a href="index.html">Voltar</a>
 
 </body>

@@ -1,13 +1,15 @@
 <%@page import="java.util.ArrayList"%>
-<%@page import="dao.ProdutoDAO"%>
-<%@page import="model.Produto"%>
+<%@page import="dao.ClienteDAO"%>
+<%@page import="model.Cliente"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	Produto produto = new Produto();
-	ProdutoDAO produtoDAO = new ProdutoDAO();
-	ArrayList<Produto> listaProdutos = new ArrayList<>();
+	Cliente cliente = new Cliente();
+	ClienteDAO clienteDAO = new ClienteDAO();
+	ArrayList<Cliente> listaClientes = new ArrayList<>();
+	listaClientes = clienteDAO.read();
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,11 +19,21 @@
 <body>
 	<table border=1>
 		<tr>
-		<td style="width: :50px" align="center">ID</td>
-		<td style="width: :50px" align="center">Nome</td>
-		<td style="width: :50px" align="center">Preço</td>
-		<td style="width: :50px" align="center">Quantidade</td>
+			<td style="width: :50px" align="center">ID</td>
+			<td style="width: :100px" align="center">Nome</td>
+			<td style="width: :50px" align="center">Endereco</td>
+			<td style="width: :100px" align="center">Modalidade</td>
+			<td style="width: :100px" align="center" colspan="2">Ações</td>
+	<%for (int cont=0; cont<listaClientes.size(); cont++){ %>
 		</tr>
+			<td align="center"><%=listaClientes.get(cont).getMatricula()%></td>
+			<td align="center"><%=listaClientes.get(cont).getNome()%></td>
+			<td align="center"><%=listaClientes.get(cont).getEndereco()%></td>
+			<td align="center"><%=listaClientes.get(cont).getModalidade()%></td>
+			<td><a href="alterar.jsp">Alterar</a></td>
+			<td><a href="excluir.jsp">Excluir</a></td>
+		</tr>
+	<%} %>
 	</table>
 	<a href="index.html">Voltar</a>
 </body>
