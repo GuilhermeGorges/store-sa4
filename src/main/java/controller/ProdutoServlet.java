@@ -7,8 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.ProdutoDAO;
+import model.Produto;
+
 /**
- * Servlet implementation class ProdutoServlet
+ * Servlet implementation class GerenciamentoProdutos
  */
 @WebServlet("/ProdutoServlet")
 public class ProdutoServlet extends HttpServlet {
@@ -25,17 +28,26 @@ public class ProdutoServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+	
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
+    	response.getWriter().print("done");
+    }
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
+		Produto produto = new Produto();
+		ProdutoDAO produtoDAO = new ProdutoDAO();		
+		produto.setNome(request.getParameter("nome"));
+		produto.setPreco(Double.parseDouble(request.getParameter("preco")));
+		produto.setQuantidadeEstoque(Integer.parseInt(request.getParameter("quantidadeEstoque")));
+		produtoDAO.create(produto);
+		response.getWriter().print("Produto "+produto.getNome() + " cadastrado com sucesso.");
 	}
 
 }

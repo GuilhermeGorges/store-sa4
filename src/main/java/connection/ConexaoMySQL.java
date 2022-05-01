@@ -4,9 +4,9 @@ import java.sql.*;
 
 public class ConexaoMySQL {
 	private static String DRIVER = "com.mysql.cj.jdbc.Driver"; //indica o nome da classe dentro do JDBC
-    private static String URL = "jdbc:mysql://localhost:3306/conexaojsp"; //endereço de acesso
+    private static String URL = "jdbc:mysql://localhost:3306/sa4_store"; //endereço de acesso
     private static String USER = "root"; //usuário do bd
-    private static String PASS = "123456"; //senha do bd
+    private static String PASS = "Java!!123"; //senha do bd
 
     public static Connection iniciarConexao() { //método para conectar bd - retorna objeto do tipo Connection
         try { //TENTATIVA DE LOCALIZAÇÃO DA CLASSE DE CONEXÃO
