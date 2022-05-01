@@ -19,7 +19,7 @@
 <body>
 	<table border=1>
 		<tr>
-			<td style="width: :50px" align="center">ID</td>
+			<td style="width: :50px" align="center">Matricula</td>
 			<td style="width: :100px" align="center">Nome</td>
 			<td style="width: :50px" align="center">Endereco</td>
 			<td style="width: :100px" align="center">Modalidade</td>
@@ -30,8 +30,12 @@
 			<td align="center"><%=listaClientes.get(cont).getNome()%></td>
 			<td align="center"><%=listaClientes.get(cont).getEndereco()%></td>
 			<td align="center"><%=listaClientes.get(cont).getModalidade()%></td>
-			<td><a href="alterar.jsp">Alterar</a></td>
-			<td><a href="excluir.jsp">Excluir</a></td>
+			<td><a href="alterar.jsp?matricula=<%=listaClientes.get(cont).getMatricula()%>
+										&nome=<%=listaClientes.get(cont).getNome()%>
+										&endereco=<%=listaClientes.get(cont).getEndereco()%>
+										&modalidade=<%=listaClientes.get(cont).getModalidade()%>">Alterar</a></td>
+
+			<td><a href="excluir.jsp?matricula=<%=listaClientes.get(cont).getMatricula()%>">Excluir</a></td>
 		</tr>
 	<%} %>
 	</table>

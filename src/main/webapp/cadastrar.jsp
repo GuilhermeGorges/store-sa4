@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Cadastro de Cliente</title>
+<title>Cadastro de Clientes Shoes Happy</title>
 </head>
 <body>
 	<form action="ClientServlet" method="post">
