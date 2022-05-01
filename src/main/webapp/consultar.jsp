@@ -40,5 +40,6 @@
 	<%} %>
 	</table>
 	<a href="index.html">Voltar</a>
+	<a href="cadastrar.jsp">Cadastrar</a>
 </body>
 </html>

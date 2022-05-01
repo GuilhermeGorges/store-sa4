@@ -41,7 +41,8 @@ public class ClientServlet extends HttpServlet {
 		cliente.setEndereco(request.getParameter("endereco"));
 		cliente.setModalidade(request.getParameter("modalidade"));
 		clienteDAO.create(cliente);
-		response.getWriter().print("Cliente "+cliente.getNome() + " cadastrado com sucesso.");		
+		response.getWriter().print("Cliente "+cliente.getNome() + " cadastrado com sucesso.");
+		response.sendRedirect("consultar.jsp");
 	}
 
 }
