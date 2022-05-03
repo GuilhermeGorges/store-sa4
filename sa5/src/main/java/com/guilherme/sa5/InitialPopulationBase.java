@@ -5,9 +5,11 @@ import com.guilherme.sa5.humanresurces.reposiroty.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 
+@Transactional
 @Component
 public class InitialPopulationBase implements CommandLineRunner {
 
