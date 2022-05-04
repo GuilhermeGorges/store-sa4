@@ -1,8 +1,5 @@
 package com.guilherme.sa5.humanresurces.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
@@ -12,7 +9,6 @@ import javax.persistence.Id;
 import java.time.LocalDate;
 import java.util.Objects;
 
-@Data
 @Entity
 public class Person {
 
@@ -24,7 +20,7 @@ public class Person {
     private LocalDate bornDate;
     private String cpf;
     private String email;
-    private String telefone;
+    private String phone;
 
     @Deprecated
     public Person() {
@@ -74,12 +70,12 @@ public class Person {
         this.email = email;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     @Override
@@ -87,7 +83,7 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return Objects.equals(id, person.id) && Objects.equals(name, person.name) && Objects.equals(bornDate, person.bornDate) && Objects.equals(cpf, person.cpf) && Objects.equals(email, person.email) && Objects.equals(telefone, person.telefone);
+        return Objects.equals(id, person.id) && Objects.equals(name, person.name) && Objects.equals(bornDate, person.bornDate) && Objects.equals(cpf, person.cpf) && Objects.equals(email, person.email) && Objects.equals(phone, person.phone);
     }
 
     @Override
