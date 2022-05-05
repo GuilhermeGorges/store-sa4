@@ -24,7 +24,11 @@ public class InitialPopulationBase implements CommandLineRunner {
         Person person2 = new Person("Luis");
         person2.setBornDate(LocalDate.of(1967,1,18));
         person2.setEmail("luis.carlos@gmail.com");
+        Person person3 = new Person("Tania");
+        person2.setBornDate(LocalDate.of(1967,1,18));
+        person2.setEmail("Tania@gmail.com");
         personRepository.save(person1);
         personRepository.save(person2);
+        personRepository.save(person3);
     }
 }
